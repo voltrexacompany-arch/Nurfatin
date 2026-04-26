@@ -1,0 +1,180 @@
+:root {
+    --bg: #050505;
+    --card-bg: #111111;
+    --accent: #ffffff;
+    --text: #ececec;
+    --gray: #888888;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(5, 5, 5, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--gray);
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.typewriter {
+    font-size: 1.5rem;
+    color: var(--gray);
+}
+
+#name-text {
+    color: var(--accent);
+    border-right: 2px solid var(--accent);
+    padding-right: 5px;
+}
+
+/* Main Content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 100px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #222;
+    transition: 0.4s;
+}
+
+.card:hover {
+    border-color: var(--gray);
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--accent);
+    color: var(--bg);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+/* Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Bottom Action */
+.bottom-action {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(transparent, var(--bg));
+    display: flex;
+    justify-content: right;
+}
+
+.btn-tiktok {
+    background: var(--accent);
+    color: var(--bg);
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 12px;
+    font-weight: 700;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.btn-tiktok:hover {
+    transform: scale(1.05);
+}
+
+.footer {
+    text-align: center;
+    padding: 40px 0;
+    color: #333;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+    .hero h1 { font-size: 2.5rem; }
+}
